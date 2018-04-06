@@ -14,8 +14,8 @@ _This page allows a user to select the size and all the toppings they'd like_
 | **Program sets price for size of pizza** | User input: small | 'Output: $15 |
 | **Program adds price for one topping** | User input: small mushrooms | 'Output: $16' |
 | **Program adds price for multiple toppings**| User Input: small mushrooms proscuitto | Output: $20 |
-| **Program displays details of pizza order'**| Input: small mushrooms proscuitto | Output: 'Small with  mushroom, proscuitto: $20' |
-| **Program displays info and price for more than one pizza'** | Input:small mushrooms proscuitto large sausage arugula  | Output: 'Small with mushrooms and proscuitto : $20 Large with sausage and Arugula: $22.50' |
+| **Program displays brief info of pizza with price'**| Input: small, red sauce mushrooms proscuitto | Output: 'Small with red sauce: $20' |
+| **Program displays toppings'** | Input: click pizza  | Output: mushrooms, proscuitto |
 
 ## Setup/Installation Requirements
 

@@ -17,6 +17,7 @@
         <form id="pizzaForm">
           <label for="size">Size:</label>
           <select id="size" class="form-control" name="size">
+            <option value="" selected disabled hidden>Choose size</option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
             <option value="large">Large</option>
@@ -24,12 +25,13 @@
           </select>
           <label for="sauce">Sauce:</label>
           <select id="sauce" class="form-control" name="sauce">
+            <option value="" selected disabled hidden>Choose Sauce</option>
             <option value="Red Sauce">Traditional Red Sauce</option>
             <option value="White Sauce">Creamy White Garlic</option>
             <option value="Pesto">Pesto</option>
             <option value="No Sauce">No Sauce</option>
           </select>
-          <label for="cheap">Regular toppings ($1 each):</label><br>
+          <label for="cheap">Regular toppings ($0.75, $1.00, $1.25, $1.50 each):</label><br>
           <input type="checkbox" name="cheap" value="Arugula">Arugula<br>
           <input type="checkbox" name="cheap" value="Tomatoes">Tomatoes<br>
           <input type="checkbox" name="cheap" value="Calabrian Chilis">Calabrian Chilis<br>
@@ -43,20 +45,25 @@
           <input type="checkbox" name="cheap" value="Serrano Peppers">Serrano Peppers<br>
           <input type="checkbox" name="cheap" value="Dried Figs">Dried Figs<br>
           <input type="checkbox" name="cheap" value="Basil">Basil<br>
-          <label for="regular">Premium toppings ($2 each):</label><br>
+          <label for="regular">Premium toppings ($1.00, $2.00, $2.50, $3.00 each):</label><br>
           <input type="checkbox" name="regular" value="Italian Sausage">Italian Sausage<br>
           <input type="checkbox" name="regular" value="Salami">Salami<br>
           <input type="checkbox" name="regular" value="Pepperoni">Pepperoni<br>
           <input type="checkbox" name="regular" value="Bacon">Bacon<br>
           <input type="checkbox" name="regular" value="Pecorino">Pecorino<br>
           <input type="checkbox" name="regular" value="Mozzarella Bufala">Mozzarella Bufala<br>
-          <label for="premium">Premium Plus toppings ($3 each):</label><br>
-          <input type="checkbox" name="premium" value="proscuitto">Proscuitto<br>
+          <label for="premium">Premium Plus toppings ($2.00, $3.00, $3.50, $4.00 each):</label><br>
+          <input type="checkbox" name="premium" value="Proscuitto">Proscuitto<br>
           <input type="checkbox" name="premium" value="Coppa">Coppa<br>
           <input type="checkbox" name="premium" value="Soppressata">Soppressata<br>
           <input type="checkbox" name="premium" value="Finocchiona">Finocchiona<br>
-          <button type="submit" name="button">Make my Pizza!</button>
+          <button type="submit" name="button">Add Pizza!</button>
         </form>
+      </div>
+      <div id="myPizzas">
+        <h2>My Pizzas</h2>
+        <ul id="addPizza">
+        </ul>
       </div>
     </div>
   </body>
