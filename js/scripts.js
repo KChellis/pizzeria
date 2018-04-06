@@ -55,9 +55,15 @@ $(function() {
     newPizza.findPrice();
     newPizza.allToppings();
     console.log(newPizza);
-    $("#addPizza").append("<li><p class='pizza'>Custom " + newPizza.size + " pizza with " + newPizza.sauce + ": $" + newPizza.price + "</p><ul class='toppings'>" + listElements(toppings) + "</ul></li>");
+    $("#addPizza").append("<li class='pizza'><p>Custom " + newPizza.size + " pizza with " + newPizza.sauce + ": $" + newPizza.price + "</p><ul class='toppings'>" + listElements(toppings) + "</ul></li>");
+    $("#myPizzas").show();
     $("input:checkbox").prop('checked', false);
     $('#size').prop('selectedIndex',0);
     $('#sauce').prop('selectedIndex',0);
+
+    $(".pizza").last().click(function() {
+      $(this).find(".toppings").slideToggle();
+    });
   });
+
 });
