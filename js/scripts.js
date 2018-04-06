@@ -1,6 +1,7 @@
 var sauce;
 var size;
 var toppings;
+var choice;
 var pizzaCount = 0;
 function Pizza(size, sauce) {
   this.size = size;
@@ -37,6 +38,16 @@ $(function() {
     console.log(string);
     return string;
   }
+  $(".choice").click(function(){
+    choice = $(this).val();
+    if (choice === "create") {
+      $("#create").show();
+      $("#signature").hide();
+    }else {
+      $("#create").hide();
+      $("#signature").show();
+    }
+  });
   $("#pizzaForm").submit(function(event) {
     event.preventDefault();
     size = $("#size").val();

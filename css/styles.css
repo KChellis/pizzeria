@@ -1,3 +1,17 @@
 .toppings, #myPizzas {
   display: none
 }
+label {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.form-control {
+  width: 250px;
+}
+button {
+  margin: 10px;
+}
+h1 {
+  text-align: center;
+}

@@ -10,13 +10,53 @@
   </head>
   <body>
     <div class="container">
-      <h1>Pizza Shop</h1>
-      <p>Welcome to pizza shop! we strive to serve the most authentic Italian wood oven fired pizza with only the freshest ingredients. It's like bringing home a little piece of Italy! Whether you choose one of our specialty pizzas or create your own personalized pizza, our pizzas will have you shouting 'MAMMA MIA!'</p>
+      <div class="jumbotron">
+        <h1>Pizza Shop</h1>
+        <p>Welcome to pizza shop! We strive to serve the most authentic Italian wood oven fired pizzas made with only the freshest ingredients. It's like bringing home a little piece of Italy! Whether you choose one of our specialty pizzas or create your own personalized pizza, our pizzas will have you shouting 'MAMMA MIA!'</p>
+      </div>
+      <h4>Would you like to select one of our signature pizzas or create your own?</h4>
+      <button class="choice btn btn-danger" type="button" value="signature">Signature Pizza</button>
+      <button class="choice btn btn-danger" type="button" value="create">Create my own!</button>
+      <div class="signature">
+        <h3>Choose one of our signature pizzas:</h3>
+        <div class="row">
+          <div class="col-md-4 card">
+            <h4>Garlic and Cheese Lovers</h4>
+            <p>If you love garlic this is the pizza for you! This pizza comes with our creamy garlic sauce, fresh mozzarella, mozzarella bufala, pecorino, and gorgonzola cheeses. It is then topped with double roasted garlic! $14 - $20 - $24 - $28</p>
+          </div>
+          <div class="col-md-4 card">
+            <h4>Meat Lovers</h4>
+            <p>This pizza is for all the die-hard carnivores out there! The pizza starts with our famous marinara sauce and fresh mozzarella. It is then topped with italian sausage, pepperoni, bacon, salami, and proscuitto! $16 - $23 - $28 - $33</p>
+          </div>
+          <div class="col-md-4 card">
+            <h4>Veggie lovers</h4>
+            <p>This pizza is for those that just can't get enough of the green stuff. The pizza starts with our housemade pesto and fresh mozzarella. It is then topped with mushrooms, Italian olives, Bell peppers, serrano peppers, red onions, basil and arugula! $15 - $19 - $23 - $28</p>
+          </div>
+        </div>
+        <form class="pizzaForm">
+          <form class="pizzaForm">
+            <label for="size">Size:</label>
+            <select class="form-control" name="size">
+              <option value="" selected disabled hidden>Choose size</option>
+              <option value="small">Small</option>
+              <option value="medium">Medium</option>
+              <option value="large">Large</option>
+              <option value="Xlarge">Xlarge</option>
+            </select>
+            <select class="form-control" name="sauce">
+              <option value="" selected disabled hidden>Choose Pizza</option>
+              <option value="Garlic & Cheese lovers">Garlic & Cheese lovers</option>
+              <option value="Meat Lovers">Meat Lovers</option>
+              <option value="Veggie Lovers">Veggie Lovers</option>
+            </select>
+        </form>
+      </div>
       <div id="create">
         <h3>Create your own pizza:</h3>
-        <form id="pizzaForm">
+        <p>All our pizzas come with fresh mozzarella.</p>
+        <form class="pizzaForm">
           <label for="size">Size:</label>
-          <select id="size" class="form-control" name="size">
+          <select class="form-control" name="size">
             <option value="" selected disabled hidden>Choose size</option>
             <option value="small">Small</option>
             <option value="medium">Medium</option>
@@ -24,39 +64,60 @@
             <option value="Xlarge">Xlarge</option>
           </select>
           <label for="sauce">Sauce:</label>
-          <select id="sauce" class="form-control" name="sauce">
+          <select class="form-control" name="sauce">
             <option value="" selected disabled hidden>Choose Sauce</option>
-            <option value="Red Sauce">Traditional Red Sauce</option>
+            <option value="Marinara Sauce">Our Famous Marinara Sauce</option>
             <option value="White Sauce">Creamy White Garlic</option>
             <option value="Pesto">Pesto</option>
             <option value="No Sauce">No Sauce</option>
           </select>
           <label for="cheap">Regular toppings ($0.75, $1.00, $1.25, $1.50 each):</label><br>
-          <input type="checkbox" name="cheap" value="Arugula">Arugula<br>
-          <input type="checkbox" name="cheap" value="Tomatoes">Tomatoes<br>
-          <input type="checkbox" name="cheap" value="Calabrian Chilis">Calabrian Chilis<br>
-          <input type="checkbox" name="cheap" value="Cherry peppers">Cherry peppers<br>
-          <input type="checkbox" name="cheap" value="Red Onion">Red Onion<br>
-          <input type="checkbox" name="cheap" value="Mushrooms">Mushrooms<br>
-          <input type="checkbox" name="cheap" value="Italian Olives">Italian Olives<br>
-          <input type="checkbox" name="cheap" value="Bell Peppers">Bell Peppers<br>
-          <input type="checkbox" name="cheap" value="Roasted Potatoes">Roasted Potatoes<br>
-          <input type="checkbox" name="cheap" value="Roasted Garlic">Roasted Garlic<br>
-          <input type="checkbox" name="cheap" value="Serrano Peppers">Serrano Peppers<br>
-          <input type="checkbox" name="cheap" value="Dried Figs">Dried Figs<br>
-          <input type="checkbox" name="cheap" value="Basil">Basil<br>
+          <div class="row">
+            <div class="col-md-2">
+              <input type="checkbox" name="cheap" value="Arugula">Arugula<br>
+              <input type="checkbox" name="cheap" value="Tomatoes">Tomatoes<br>
+              <input type="checkbox" name="cheap" value="Calabrian Chilis">Calabrian Chilis<br>
+              <input type="checkbox" name="cheap" value="Cherry peppers">Cherry peppers<br>
+              <input type="checkbox" name="cheap" value="Red Onion">Red Onion<br>
+            </div>
+            <div class="col-md-2">
+              <input type="checkbox" name="cheap" value="Bell Peppers">Bell Peppers<br>
+              <input type="checkbox" name="cheap" value="Roasted Potatoes">Roasted Potatoes<br>
+              <input type="checkbox" name="cheap" value="Roasted Garlic">Roasted Garlic<br>
+              <input type="checkbox" name="cheap" value="Serrano Peppers">Serrano Peppers<br>
+              <input type="checkbox" name="cheap" value="Dried Figs">Dried Figs<br>
+            </div>
+            <div class="col-md-2">
+              <input type="checkbox" name="cheap" value="Basil">Basil<br>
+              <input type="checkbox" name="cheap" value="Mushrooms">Mushrooms<br>
+              <input type="checkbox" name="cheap" value="Italian Olives">Italian Olives<br>
+            </div>
+          </div>
           <label for="regular">Premium toppings ($1.00, $2.00, $2.50, $3.00 each):</label><br>
-          <input type="checkbox" name="regular" value="Italian Sausage">Italian Sausage<br>
-          <input type="checkbox" name="regular" value="Salami">Salami<br>
-          <input type="checkbox" name="regular" value="Pepperoni">Pepperoni<br>
-          <input type="checkbox" name="regular" value="Bacon">Bacon<br>
-          <input type="checkbox" name="regular" value="Pecorino">Pecorino<br>
-          <input type="checkbox" name="regular" value="Mozzarella Bufala">Mozzarella Bufala<br>
+          <div class="row">
+            <div class="col-md-2">
+              <input type="checkbox" name="regular" value="Italian Sausage">Italian Sausage<br>
+              <input type="checkbox" name="regular" value="Salami">Salami<br>
+              <input type="checkbox" name="regular" value="Pepperoni">Pepperoni<br>
+            </div>
+            <div class="col-md-2">
+              <input type="checkbox" name="regular" value="Bacon">Bacon<br>
+              <input type="checkbox" name="regular" value="Pecorino">Pecorino<br>
+              <input type="checkbox" name="regular" value="Mozzarella Bufala">Mozzarella Bufala<br>
+            </div>
+          </div>
           <label for="premium">Premium Plus toppings ($2.00, $3.00, $3.50, $4.00 each):</label><br>
-          <input type="checkbox" name="premium" value="Proscuitto">Proscuitto<br>
-          <input type="checkbox" name="premium" value="Coppa">Coppa<br>
-          <input type="checkbox" name="premium" value="Soppressata">Soppressata<br>
-          <input type="checkbox" name="premium" value="Finocchiona">Finocchiona<br>
+          <div class="row">
+            <div class="col-md-2">
+              <input type="checkbox" name="premium" value="Proscuitto">Proscuitto<br>
+              <input type="checkbox" name="premium" value="Coppa">Coppa<br>
+              <input type="checkbox" name="premium" value="Soppressata">Soppressata<br>
+            </div>
+            <div class="col-md-2">
+              <input type="checkbox" name="premium" value="Finocchiona">Finocchiona<br>
+              <input type="checkbox" name="premium" value="Gorgonzola">Gorgonzola<br>
+            </div>
+          </div>
           <button type="submit" name="button">Add Pizza!</button>
         </form>
       </div>
