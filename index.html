@@ -6,11 +6,58 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.3.1.js" charset="utf-8"></script>
     <script src="js/scripts.js" charset="utf-8"></script>
-    <title></title>
+    <title>Pizza Shop</title>
   </head>
   <body>
     <div class="container">
-
+      <h1>Pizza Shop</h1>
+      <p>Welcome to pizza shop! we strive to serve the most authentic Italian wood oven fired pizza with only the freshest ingredients. It's like bringing home a little piece of Italy! Whether you choose one of our specialty pizzas or create your own personalized pizza, our pizzas will have you shouting 'MAMMA MIA!'</p>
+      <div id="create">
+        <h3>Create your own pizza:</h3>
+        <form id="pizzaForm">
+          <label for="size">Size:</label>
+          <select class="form-control" name="size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="Xlarge">Xlarge</option>
+          </select>
+          <label for="sauce">Sauce:</label>
+          <select class="form-control" name="sauce">
+            <option value="Red Sauce">Traditional Red Sauce</option>
+            <option value="White Sauce">Creamy White Garlic</option>
+            <option value="Pesto">Pesto</option>
+            <option value="No Sauce">No Sauce</option>
+          </select>
+          <label for="cheap">Regular toppings ($1 each):</label><br>
+          <input type="checkbox" name="cheap" value="Arugula">Arugula<br>
+          <input type="checkbox" name="cheap" value="Tomatoes">Tomatoes<br>
+          <input type="checkbox" name="cheap" value="Calabrian Chilis">Calabrian Chilis<br>
+          <input type="checkbox" name="cheap" value="Cherry peppers">Cherry peppers<br>
+          <input type="checkbox" name="cheap" value="Red Onion">Red Onion<br>
+          <input type="checkbox" name="cheap" value="Mushrooms">Mushrooms<br>
+          <input type="checkbox" name="cheap" value="Italian Olives">Italian Olives<br>
+          <input type="checkbox" name="cheap" value="Bell Peppers">Bell Peppers<br>
+          <input type="checkbox" name="cheap" value="Roasted Potatoes">Roasted Potatoes<br>
+          <input type="checkbox" name="cheap" value="Roasted Garlic">Roasted Garlic<br>
+          <input type="checkbox" name="cheap" value="Serrano Peppers">Serrano Peppers<br>
+          <input type="checkbox" name="cheap" value="Dried Figs">Dried Figs<br>
+          <input type="checkbox" name="cheap" value="Basil">Basil<br>
+          <label for="regular">Premium toppings ($2 each):</label><br>
+          <input type="checkbox" name="regular" value="Italian Sausage">Italian Sausage<br>
+          <input type="checkbox" name="regular" value="Salami">Salami<br>
+          <input type="checkbox" name="regular" value="Pepperoni">Pepperoni<br>
+          <input type="checkbox" name="regular" value="Bacon">Bacon<br>
+          <input type="checkbox" name="regular" value="Pecorino">Pecorino<br>
+          <input type="checkbox" name="regular" value="Mozzarella Bufala">Mozzarella Bufala<br>
+          <label for="premium">Premium Plus toppings ($3 each):</label><br>
+          <input type="checkbox" name="premium" value="proscuitto">Proscuitto<br>
+          <input type="checkbox" name="premium" value="Coppa">Coppa<br>
+          <input type="checkbox" name="premium" value="Soppressata">Soppressata<br>
+          <input type="checkbox" name="premium" value="Finocchiona">Finocchiona<br>
+          <button type="submit" name="button">Make my Pizza!</button>
+        </form>
+      </div>
     </div>
   </body>
 </html>
