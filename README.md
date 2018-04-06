@@ -6,7 +6,7 @@
 
 ## Description
 
-_This page allows a user to select the size and all the toppings they'd like_
+_This page allows a user to select the size and all the toppings on any pizzas they'd like to order . kchellis.github.io/pizzeria_
 
 ### Specs
 | Spec | Input | Output |
