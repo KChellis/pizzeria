@@ -6,49 +6,51 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/jquery-3.3.1.js" charset="utf-8"></script>
     <script src="js/scripts.js" charset="utf-8"></script>
-    <title>Pizza Shop</title>
+    <title>Il Maiale Grasso Pizzeria</title>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h1>Pizza Shop</h1>
-        <p>Welcome to pizza shop! We strive to serve the most authentic Italian wood oven fired pizzas made with only the freshest ingredients. It's like bringing home a little piece of Italy! Whether you choose one of our specialty pizzas or create your own personalized pizza, our pizzas will have you shouting 'MAMMA MIA!'</p>
+        <h1>Il Maiale Grasso Pizzeria</h1>
+        <p>Welcome to Il Maiale Grasso Pizzeria! We strive to serve the most authentic Italian wood oven fired pizzas made with only the freshest ingredients. It's like bringing home a little piece of Italy! Whether you choose one of our specialty pizzas or create your own personalized pizza, our pizzas will have you shouting 'MAMMA MIA!'</p>
       </div>
-      <h4>Would you like to select one of our signature pizzas or create your own?</h4>
-      <button class="choice btn btn-danger" type="button" value="signature">Signature Pizza</button>
-      <button class="choice btn btn-danger" type="button" value="create">Create my own!</button>
-      <div class="signature">
+      <div class="top">
+        <h4>Would you like to select one of our signature pizzas or create your own?</h4>
+        <button class="choice btn btn-danger" type="button" value="signature">Signature Pizza</button>
+        <button class="choice btn btn-danger" type="button" value="create">Create my own!</button>
+      </div>
+      <div id="signature">
         <h3>Choose one of our signature pizzas:</h3>
         <div class="row">
           <div class="col-md-4 card">
             <h4>Garlic and Cheese Lovers</h4>
-            <p>If you love garlic this is the pizza for you! This pizza comes with our creamy garlic sauce, fresh mozzarella, mozzarella bufala, pecorino, and gorgonzola cheeses. It is then topped with double roasted garlic! $14 - $20 - $24 - $28</p>
+            <p>If you love garlic this is the pizza for you! This pizza comes with our creamy garlic sauce, fresh mozzarella, mozzarella bufala, pecorino, and gorgonzola cheeses. It is then topped with roasted garlic!</p>
           </div>
           <div class="col-md-4 card">
             <h4>Meat Lovers</h4>
-            <p>This pizza is for all the die-hard carnivores out there! The pizza starts with our famous marinara sauce and fresh mozzarella. It is then topped with italian sausage, pepperoni, bacon, salami, and proscuitto! $16 - $23 - $28 - $33</p>
+            <p>This pizza is for all the die-hard carnivores out there! The pizza starts with our famous marinara sauce and fresh mozzarella. It is then topped with italian sausage, pepperoni, bacon, salami, and proscuitto!</p>
           </div>
           <div class="col-md-4 card">
             <h4>Veggie lovers</h4>
-            <p>This pizza is for those that just can't get enough of the green stuff. The pizza starts with our housemade pesto and fresh mozzarella. It is then topped with mushrooms, Italian olives, Bell peppers, serrano peppers, red onions, basil and arugula! $15 - $19 - $23 - $28</p>
+            <p>This pizza is for those that just can't get enough of the green stuff. The pizza starts with our housemade pesto and fresh mozzarella. It is then topped with mushrooms, Italian olives, Bell peppers, serrano peppers, red onions, basil and arugula!</p>
           </div>
         </div>
         <form class="pizzaForm">
-          <form class="pizzaForm">
-            <label for="size">Size:</label>
-            <select class="form-control" name="size">
-              <option value="" selected disabled hidden>Choose size</option>
-              <option value="small">Small</option>
-              <option value="medium">Medium</option>
-              <option value="large">Large</option>
-              <option value="Xlarge">Xlarge</option>
-            </select>
-            <select class="form-control" name="sauce">
-              <option value="" selected disabled hidden>Choose Pizza</option>
-              <option value="Garlic & Cheese lovers">Garlic & Cheese lovers</option>
-              <option value="Meat Lovers">Meat Lovers</option>
-              <option value="Veggie Lovers">Veggie Lovers</option>
-            </select>
+          <label for="size">Size:</label>
+          <select class="size form-control" name="size" required>
+            <option value="" selected disabled hidden>Choose size</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="XLarge">Xlarge</option>
+          </select>
+          <select id="pizza" class="form-control" name="pizza" required>
+            <option value="" selected disabled hidden>Choose Pizza</option>
+            <option value="Garlic & Cheese Lovers">Garlic & Cheese lovers</option>
+            <option value="Meat Lovers">Meat Lovers</option>
+            <option value="Veggie Lovers">Veggie Lovers</option>
+          </select>
+          <button class="btn btn-danger" type="submit" name="button">Add Pizza!</button>
         </form>
       </div>
       <div id="create">
@@ -56,18 +58,18 @@
         <p>All our pizzas come with fresh mozzarella.</p>
         <form class="pizzaForm">
           <label for="size">Size:</label>
-          <select class="form-control" name="size">
+          <select class="form-control size" name="size" required>
             <option value="" selected disabled hidden>Choose size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="Xlarge">Xlarge</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="XLarge">Xlarge</option>
           </select>
           <label for="sauce">Sauce:</label>
-          <select class="form-control" name="sauce">
+          <select class="form-control sauce" name="sauce" required>
             <option value="" selected disabled hidden>Choose Sauce</option>
             <option value="Marinara Sauce">Our Famous Marinara Sauce</option>
-            <option value="White Sauce">Creamy White Garlic</option>
+            <option value="Creamy Garlic Sauce">Creamy White Garlic</option>
             <option value="Pesto">Pesto</option>
             <option value="No Sauce">No Sauce</option>
           </select>
@@ -118,13 +120,45 @@
               <input type="checkbox" name="premium" value="Gorgonzola">Gorgonzola<br>
             </div>
           </div>
-          <button type="submit" name="button">Add Pizza!</button>
+          <button class="btn btn-danger" type="submit" name="button">Add Pizza!</button>
         </form>
       </div>
       <div id="myPizzas">
         <h2>My Pizzas</h2>
         <ul id="addPizza">
         </ul>
+        <p class="total">Total: $<span id="total"></span></p>
+        <button class="btn btn-danger checkout" type="button" name="button">Checkout</button>
+      </div>
+      <div id="checkout">
+        <h4>Is your order for delivery or pick up?</h4>
+        <button class="btn btn-danger delivery" type="button" value="delivery">Delivery</button>
+        <button class="btn btn-danger delivery" type="button" value="pickup">Pick up</button>
+      </div>
+      <div id="delivery">
+        <form class="address" action="index.html" method="post">
+          <p>Please enter the address for delivery:</p>
+          <label for="street">Street</label>
+          <input type="text" class="form-control street" required>
+          <label for="city">City</label>
+          <input type="text" class="form-control city" required>
+          <label for="state">State</label>
+          <input type="text" class="form-control state" required>
+          <label for="zip">Zip</label>
+          <input type="number" class="form-control zip" required>
+          <button type="submit" class="btn">Send my pizza!</button>
+        </form>
+        <div id="address">
+          <p>Your delivery to:</p>
+          <p id="street"></p>
+          <p><span id="city"></span>, <span id="state"></span> <span id="zip"></span></p>
+          <p>will arrive within an hour!</p>
+          <button class="btn btn-danger reset" type="button" name="button">New Order</button>
+        </div>
+      </div>
+      <div class="pickup">
+        <h4>Your order will be ready in 45 minutes!</h4>
+        <button class="btn btn-danger reset" type="button" name="button">New Order</button>
       </div>
     </div>
   </body>

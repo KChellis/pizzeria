@@ -1,4 +1,4 @@
-.toppings, #myPizzas {
+.toppings, #myPizzas, #signature, #create, #checkout, #delivery, .pickup, #address{
   display: none
 }
 label {
@@ -14,4 +14,39 @@ button {
 }
 h1 {
   text-align: center;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.jumbotron {
+  color: #e02b0b;
+  background:
+   linear-gradient(
+     rgba(25, 25, 25, 0.54),
+     rgba(25, 25, 25, 0.54)
+   ), url("../img/oven.jpg") no-repeat center center fixed;
+   background-size: cover;
+}
+div.jumbotron p {
+  font-size: 20px;
+  font-weight: bold;
+  text-outline: 1px white;
+}
+html {
+  min-height: 100%;
+  background: linear-gradient(to right, green, white, red);
+  background-repeat: no-repeat;
+}
+body {
+  background: transparent;
+}
+.card {
+  background-color: transparent;
+  border: 3px solid black;
+}
+.total {
+  font-weight: bold;
+  font-size: 20px;
 }
